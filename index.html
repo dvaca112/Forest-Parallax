@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Parallax Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">Logo</a>
+      <nav class="menu">
+        <div class="toggle"></div>
+        <li style="--i:0;" id="--i-0">
+          <a href="#"><ion-icon name="home-sharp"></ion-icon></a>
+        </li>
+        <li style="--i:1;" id="--i-1">
+          <a href="#"><ion-icon></ion-icon></a>
+        </li>
+        <li style="--i:2;" id="--i-2">
+          <a href="#"><ion-icon name="person-sharp"></ion-icon></a>
+        </li>
+        <li style="--i:3;" id="--i-3">
+          <a href="#"><ion-icon></ion-icon></a>
+        </li>
+        <li style="--i:4;" id="--i-4">
+          <a href="#"><ion-icon name="mail-sharp"></ion-icon></a>
+        </li>
+        <li style="--i:5;" id="--i-5">
+          <a href="#"><ion-icon></ion-icon></a>
+        </li>
+        <li style="--i:6;" id="--i-6">
+          <a href="#"><ion-icon></ion-icon></a>
+        </li>
+        <li style="--i:7;" id="--i-7">
+          <a href="#"><ion-icon></ion-icon></a>
+        </li>
+      </nav>
+    </header>
+    <section>
+      <div>
+      <img src="/images/tree.png" id="forest">
+      <h2 id="text"><span>it's time for a new</span></br>Adventure</h2>
+      <img src="/images/bird1.png" id="bird1">
+      <img src="/images/bird2.png" id="bird2">
+      <a href="#sec" id="btn">Explore</a>
+      <img src="/images/rock-l.png" id="rock1">
+      <img src="/images/rock-r.png" id="rock2">
+      <img src="/images/water.png" id="water">
+    </div>
+  
+    </section>
+
+    <div class="sec" id="sec">
+      <div class="about">
+        <h2>About Me</h2>
+        <div class="row100">
+          <div class="col">
+            <div class="container">
+              <div class="box">
+                <div class="circle">
+                  <img src="/images/perfil.png">
+                </div>
+              </div>
+            </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+          </div>
+        </div>
+      </div>
+       
+        <div class="contact">
+          <h2>Contact Me</h2>
+          <div class="row100">
+            <div class="col">
+              <div class="inputBox">
+                <input type="text" name="" required="required">
+                <span class="text">First Name</span>
+                <span class="line"></span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="inputBox">
+                <input type="text" name="" required="required">
+                <span class="text">Last Name</span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row100">
+            <div class="col">
+              <div class="inputBox">
+                <input type="text" name="" required="required">
+                <span class="text">Email</span>
+                <span class="line"></span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="inputBox">
+                <input type="text" name="" required="required">
+                <span class="text">Phone</span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row100">
+            <div class="col">
+              <div class="inputBox textarea">
+                <textarea required="required"></textarea>
+                <span class="text">Type Your Message Here...</span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row100">
+            <div class="col">
+                <input type="submit" value="Send">
+            </div>
+          </div>
+        </div> 
+      </div>
+
+      <footer>
+        
+        <ul class="social">
+          <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        <ul class="link">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <p>Quiggler | All Rights Reserved</p>
+      </footer>
+      
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+      let forest = document.getElementById('forest');
+      let rock1 = document.getElementById('rock1');
+      let rock2 = document.getElementById('rock2');
+      let water = document.getElementById('water');
+      let bird1 = document.getElementById('bird1');
+      let bird2 = document.getElementById('bird2');
+      let text = document.getElementById('text');
+      let btn = document.getElementById('btn');
+      let header = document.getElementById('header');
+
+      window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        forest.style.top = value * 0.25 + 'px';
+        rock1.style.left = value * -2 + 'px';
+        rock2.style.right = value * -2 + 'px';
+        water.style.top = 90 + value * 0.2 + 'px';
+        text.style.top = 40 + value * -0.2 + '%';
+        btn.style.marginTop = value * 1.5 + 'px';
+        header.style.top = value * 0.5 + 'px';
+        bird1.style.top = value * -1.5 + 'px';
+        bird1.style.right = value * 2 + 'px';
+        bird2.style.top = value * -1.5 + 'px';
+        bird2.style.right = value * -5 + 'px';
+      })
+    </script>
+
+<script>
+  let toggle = document.querySelector('.toggle');
+  let menu = document.querySelector('.menu');
+  toggle.onclick = function(){
+    menu.classList.toggle('active')
+  }
+</script>
+
+  </body>
+</html>
